@@ -11,9 +11,13 @@ def main(args):
     start = int(input("Podaj liczbę 1: "))
     stop = int(input("Podaj liczbę 2: "))
     
+    while start >= stop:
+        print("Za mała 2 liczba")
+        stop = int(input("Podaj liczbę 2: "))
+    
     if start >= stop:
         print("Błędne dane!")
-        exit(0)
+        exit(0) 
 
     
     for i in range(start, stop + 1):
