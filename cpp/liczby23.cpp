@@ -41,4 +41,3 @@ int main(int argc, char **argv)
     cout << "\n\nLiczb 3-cyfrowych: " << ile << endl;
     return 0;
 
-
