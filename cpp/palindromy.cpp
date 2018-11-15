@@ -1,32 +1,36 @@
 /*
- * palindormy.cpp
- * 
-  
+ * znaki.cpp
  */
 
-
 #include <iostream>
+#include <string.h>
 
 using namespace std;
 
 
-
-int main(int argc, char **argv) 
-{
-	
-    const int rozmiar = 20;
-    char wyraz[20]; // 4! = 1 * 2 * 3 * 4 = 24
-    cout << "POdaj wyraz lub zdanie: ";
-    cin.getline(wyraz,rozmiar);
-    cout << cin. gcount() << endl;
-    cout << strlen(wyraz) << endl;
-    if (palindrom(wyraz, strlen(wyraz)))
-        cout << :Palindrom!";
-    else
-        cout << "Nie Palindrom!";
-   
-	return 0;
-
-
-
+bool palindrom(char w[], int roz) {
+    bool czyPal = true;
+    for (int i = 0; i < roz / 2; i++) {
+        if (w[i] != w[roz-1-i]) {
+            czyPal=false;
+            break;
+        }
+    }
+    return czyPal;
 }
+
+int main(int argc, char **argv)
+{
+    const int rozmiar = 20; 
+    char tekst[rozmiar]; 
+    cout << "Podaj wyraz lub zdanie: ";
+    cin.getline(tekst, rozmiar);
+    if (palindrom(tekst, strlen(tekst)))
+        cout << "Palindrom!";
+    else
+        cout << "Nie palindrom";
+    return 0;
+}
+
+
+
