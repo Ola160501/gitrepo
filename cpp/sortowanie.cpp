@@ -1,4 +1,4 @@
-s (67 sloc) 1.56 KB
+
 /*
  * sortowanie.cpp
  */
@@ -8,7 +8,7 @@ s (67 sloc) 1.56 KB
 using namespace std;
 
 void wypelnij_los(int tab[], int roz) {
-    srand(time(NULL));  // inicjacja generatora liczb pseudolosowych
+    srand(time(NULL));  
     for(int i = 0; i < roz; i++) {
         tab[i] = rand() % 101;
     }
@@ -44,6 +44,16 @@ void sort_bubble(int tab[], int n) {
         }
 }
 
+void sort_selection(int tab[], int n) {
+    cout << ;
+    int i, j, el;
+    for (i = 1; i < n; i++) {
+        k = i-1; 
+        while (k.= i + 1; j < n; j++){
+            if (tab[k+1]} < tab[k])
+                k--;
+        }
+
 
 int main(int argc, char **argv)
 {
@@ -51,7 +61,7 @@ int main(int argc, char **argv)
     int tab[roz];
     wypelnij_los(tab, roz);
     drukuj(tab, roz);
-    zamien(5, 10)
+    cout <, endl << endl
 	return 0;
 }
 
